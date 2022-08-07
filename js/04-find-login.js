@@ -7,19 +7,32 @@
 // - Логика break
 // - Метод includes() с тернарным оператором
 
-const logins = ['m4ngoDoge', 'kiwidab3st', 'poly1scute', 'aj4xth3m4n'];
-const loginToFind = 'poly1scute';
-let message = '';
+const logins = ["m4ngoDoge", "kiwidab3st", "poly1scute", "aj4xth3m4n"];
+const loginToFind = "poly1scute";
+// let message = `Пользователь ${loginToFind} не найден.`;
 
-for (let i = 0; i < logins.length; i += 1) {
-    const login = logins[i];
+// for (let i = 0; i < logins.length; i += 1) {
+//     const login = logins[i];
 
-    if (login === loginToFind) {
-        message = `Пользователь ${loginToFind} найден.`;
-        break;
-    }
+//     if (login === loginToFind) {
+//         message = `Пользователь ${loginToFind} найден.`;
+//         break;
+//     }
 
-    message = `Пользователь ${loginToFind} не найден.`;
-}
+//     // message = `Пользователь ${loginToFind} не найден.`;
+// }
+
+// for (const login of logins) {
+//     if (login === loginToFind) {
+//         message = `Пользователь ${loginToFind} найден.`;
+//         break;
+//     }
+// }
+
+// console.log(message);
+
+const message = logins.includes(loginToFind)
+  ? `Пользователь ${loginToFind} найден.`
+  : `Пользователь ${loginToFind} не найден.`;
 
 console.log(message);
